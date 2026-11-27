@@ -3,7 +3,7 @@ An antiscaming data tool to verify transactions.
 # PesaLens: Project Brief, Research Summary and Data Plan
 
 **Challenge brief:** Utilization of Funds (KEPRO), circular economy
-**Team:** Joy, Victor (team lead), Caleb, Clinton
+**Team:** Joy (team lead), Victor, Caleb, Clinton
 **Version:** Draft v1, prepared 25 November 2026 (update after the context call)
 
 **Legend**
