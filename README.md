@@ -1,15 +1,19 @@
-# PESALENS
-An antiscaming data tool to verify transactions.
 # PesaLens: Project Brief, Research Summary and Data Plan
 
 **Challenge brief:** Utilization of Funds (KEPRO), circular economy
-**Team:** Joy (team lead), Victor, Caleb, Clinton
-**Version:** Draft v1, prepared 25 November 2026 (update after the context call)
+**Team:** Joy (team lead), Victor, Caleb, Ian, Clinton
+**Version:** Draft v2, updated 27 November 2026 (update again after the context call)
 
 **Legend**
 - ✅ Confirmed from a source (see Sources at the bottom)
 - 🔶 Our inference or hypothesis, to be validated
 - ❓ Open question, to ask KEPRO
+
+## What changed in v2
+- Team lead corrected to **Joy** (v1 listed Victor).
+- **Ian** added to the team.
+- **Scope refocus proposed by Joy on 26 Nov:** build the money layer, joined to what TakaTrace has verified. Traceability-type features are parked as Brief 2 territory. Pending team confirmation on the 27 Nov call (see 1.4).
+- Task list, AI questions and data entities adjusted to match. Meeting cadence and proposal timing recorded.
 
 ---
 
@@ -19,25 +23,36 @@ An antiscaming data tool to verify transactions.
 
 | Member | Background | Proposed contribution (to be confirmed) |
 |---|---|---|
-| Joy | CS student, prior Business IT. Python, SQL, data analysis, FastAPI. Creates economics content. | Sector research, financial and business validation, user needs, realism checks on data assumptions |
-| Victor (team lead) | AI/ML, Python, data analysis, full-stack. Hackathon experience. | Team coordination, ML pipeline, model design |
+| Joy (team lead) | CS student, prior Business IT. Python, SQL, data analysis, FastAPI. Creates economics content. | Team coordination and scheduling, sector research, financial and business validation, user needs, realism checks on data assumptions |
+| Victor | AI/ML, Python, data analysis, full-stack. Hackathon experience. | ML pipeline, model design, AI architecture |
 | Caleb | BSc Mechatronic Engineering. Python, ML/AI engineering. Previously IoT and embedded systems. | Data engineering, ML models, possible sensor/weighing-data simulation |
-| Clinton | Full-stack dev and CS student. React, Node, Python, Supabase. UI/UX, pitching, KRA eTIMS integration. | Data model and schema, prototype app, verification flow, UI/UX, pitch |
+| Clinton | Full-stack dev and CS student. React, Node, Python, Supabase. UI/UX, pitching, KRA eTIMS integration. | Data model and schema, prototype app, payment-to-verification dashboard, UI/UX, pitch |
+| Ian | Joined 23 Nov. Describes himself as a non-practicing tech person. | Audit lens: what an auditor needs to trust a claim (proposed) |
 
-Roles are **proposed**. The team agreed to allocate tasks formally after the guidance session. Record the final allocation here once it is settled.
+Roles are **proposed** and still to be confirmed with the whole team. Record the final allocation here once it is settled.
 
 ### 1.2 What we have decided so far
-- Brief chosen: **Utilization of Funds (KEPRO)**. One open slot remains for a non-technical teammate, depending on matching.
+- Brief chosen: **Utilization of Funds (KEPRO)**. Ian joined on 23 Nov as the fifth member.
 - Joy's framing: close the gap between money spent and actual impact. Example: not just "a waste manager received and spent KSh 500,000" but what it achieved, how much waste was verifiably collected or recycled, and the cost per verified tonne.
 - Direction: an AI-powered fund-to-impact intelligence system.
 - Process rule (Caleb): start from the data that exists or will be made available.
 - Process rule (Victor): research KEPRO itself so we design for its real workflow, then validate on the context call.
-- Group call: planned for an evening (date TBC). Context call with the organization: before proposal submission (date TBC).
+- Meeting cadence (agreed 23 Nov): fixed calls on Monday and Friday at 8:30 PM, with at least two days' notice. Context call with KEPRO: expected after Friday 27 Nov and before proposal submission (date TBC).
+- Proposal: draft it before the context call and revise after it (Victor). First step is understanding what the proposal must contain (Joy). Deadline believed to be one to two weeks from 23 Nov (unconfirmed).
+- Victor's 26 Nov review: the brief is strong, but some points are already covered by TakaTrace. To be reviewed on the 27 Nov call.
 
 ### 1.3 Our own ideas on the table
-- Receipt and expense verification using KRA eTIMS to link spending to proof (Clinton).
-- Retail anchor point: informal shops (dukas) as verifiable nodes with identity, stock-in and waste-out records (Clinton, hypothesis only).
+- Receipt and expense verification using KRA eTIMS to link spending to proof (Clinton). Still relevant on the money side.
+- Retail anchor point: informal shops (dukas) as verifiable nodes with identity, stock-in and waste-out records (Clinton, hypothesis only). **Parked in v2:** this is traceability work, see 1.4.
 - Reuse (refill, shared containers) as a differentiator that needs its own metric.
+
+### 1.4 Scope update proposed on 26 Nov (v2)
+Joy re-read both KEPRO briefs (Utilization of Funds and Traceability), found overlap with our ideas, and noted that TakaTrace already handles most of what we discussed.
+
+- 🔶 **Proposed direction (pending team confirmation on 27 Nov):** our solution revolves around the **money**. Join what was paid with what TakaTrace verified, show **cost per verified tonne**, and flag underperformers. Details still to be worked out.
+- 🔶 **Parked as traceability work (Brief 2):** QR handover scans, two-party confirmation, GPS capture, mass balance and the duka anchor.
+- **What this means:** we consume verified activity from TakaTrace instead of collecting it ourselves. The key questions become whether TakaTrace's verified data is accessible and how payments map to it.
+- ❓ If the two briefs overlap, ask KEPRO how they relate.
 
 ---
 
@@ -46,7 +61,8 @@ Roles are **proposed**. The team agreed to allocate tasks formally after the gui
 | Topic | What we looked at | Status |
 |---|---|---|
 | KEPRO website, About page | Mission, vision, history, model, programs | Done |
-| TakaTrace portal | KEPRO's traceability platform and roles | Done |
+| TakaTrace portal | KEPRO's traceability platform and roles | Done (detailed team review planned 27 Nov) |
+| Both KEPRO briefs | Utilization of Funds and Traceability briefs compared by Joy on 26 Nov, overlap found | In progress |
 | Legal framework | Sustainable Waste Management Act 2022, EPR Regulations 2024, plastic packaging rules, enforcement status | Done (needs full-text read) |
 | Waste scope | Which product categories KEPRO covers vs other PROs | Done |
 | Retail structure | Retail categories in Kenya, informal share | Done |
@@ -115,7 +131,9 @@ Roles are **proposed**. The team agreed to allocate tasks formally after the gui
 ### 5.2 Who our solution probably serves
 🔶 The buyer is most likely **KEPRO**, with benefits flowing to members (proof), NEMA (verified reporting) and collectors (traceable payment). Tenants, clients and vendors from other app projects do not map directly to this ecosystem. ❓ Confirm on the call.
 
-### 5.3 Retail and the duka hypothesis
+### 5.3 Retail and the duka hypothesis (parked in v2)
+🔶 The duka anchor is traceability work (see 1.4). Kept here as background in case the team revisits it.
+
 - ✅ Retail categories: modern trade (supermarkets), convenience stores, wholesalers and cash-and-carry, informal and traditional trade (dukas, kiosks, market stalls), specialty retail, e-commerce, hospitality and foodservice.
 - ✅ Informal trade is the biggest category: estimates cluster around 70% of retail sales and about 80% of FMCG sales. A USDA report puts it at 85-90% of food sales.
 - 🔶 Anchor idea: a **verified duka node** with identity, stock-in from vendors and waste-out to collectors, giving a mass balance (packaging in vs packaging recovered).
@@ -136,7 +154,7 @@ Roles are **proposed**. The team agreed to allocate tasks formally after the gui
 | Regulatory reporting | ✅ NEMA requires reports and the Restoration Fund remittance | ❓ Format and how verification is demonstrated |
 | Fraud and double-counting | No public information | ❓ Where it actually happens today |
 
-**Gap we are targeting:** a system that links *money in* to *money out* to *verified physical impact*, producing cost per verified tonne, a verification confidence score per claim, and early flags for underperforming or suspicious initiatives.
+**Gap we are targeting (v2):** a money layer that links *money in* to *money out* to the *impact TakaTrace has verified*, producing cost per verified tonne, a payment-to-evidence match score, and early flags for underperforming or suspicious initiatives. We rely on TakaTrace for the verification itself.
 
 ---
 
@@ -144,9 +162,9 @@ Roles are **proposed**. The team agreed to allocate tasks formally after the gui
 
 ### 7.1 Questions our AI should answer
 1. What is the **cost per verified tonne** for each program, actor and material?
-2. Which claims or payments look **anomalous** (inflated weights, duplicate claims, ghost actors, mismatched location or time)?
+2. Which payments look **anomalous** (paid with no verified activity, paid-per-tonne outliers, duplicate payments, payment before verification)?
 3. Which initiatives are **underperforming** relative to the money received?
-4. What is the **verification confidence score** for each transaction, based on how much independent evidence supports it?
+4. What is the **payment-to-evidence match score** for each payment, based on how much TakaTrace-verified quantity supports it?
 5. What recovery is **forecast** for the next period, and what funding does it imply?
 6. (Stretch) How do **reuse cycles** compare to recycling per shilling spent?
 
@@ -154,6 +172,8 @@ Roles are **proposed**. The team agreed to allocate tasks formally after the gui
 The AI is only as good as the data. If KEPRO's real data is limited, we **create realistic, clearly-labeled synthetic data** built on real parameters, with known seeded anomalies so we can measure how well the AI finds them.
 
 ### 7.3 Proposed data entities (draft)
+Entities that would come from TakaTrace if we can access it: actor verification level, collection event, transfer, processing record, evidence and verification status. If not, we simulate them. Everything else is on the money side.
+
 - **Member / producer:** id, category, registration status, declared volumes by material and period
 - **Fund inflow:** payer, amount, date, period, source type
 - **Program / initiative:** id, objective, budget, region, owner
@@ -165,6 +185,7 @@ The AI is only as good as the data. If KEPRO's real data is limited, we **create
 - **Evidence:** type (photo, GPS, weighbridge ticket, QR scan, M-Pesa reference, eTIMS invoice number, signed confirmation), timestamp, hash
 - **Verification result:** transaction, score, reasons
 - **Impact metric:** tonnes, cost per tonne, reuse cycles, by program and period
+- **Payment-to-evidence match:** payment, matched verified quantity, cost per verified tonne, flag reasons
 
 ---
 
@@ -172,7 +193,7 @@ The AI is only as good as the data. If KEPRO's real data is limited, we **create
 
 1. Which funds exactly does "utilization" cover, and who decides how they are spent?
 2. Who is the problem for: member trust, NEMA reporting, donor reporting, or internal management?
-3. What does TakaTrace already capture, and what is missing?
+3. What does TakaTrace already capture, and can we access verified quantities per payee (export or API)?
 4. What data can we get (samples, API, anonymized records) and under what restrictions?
 5. How will submissions be judged?
 6. How are collectors and recyclers paid, and what proof is required first?
@@ -180,6 +201,7 @@ The AI is only as good as the data. If KEPRO's real data is limited, we **create
 8. Are dukas or informal retailers part of the network?
 9. Is reuse tracked or funded?
 10. Is there a pilot route after the challenge?
+11. How do the Utilization of Funds and Traceability briefs relate, and should our solution assume TakaTrace as the source of verified data?
 
 A longer question list lives with the team chat checklist. Record answers directly under each question after the call.
 
@@ -193,7 +215,8 @@ A longer question list lives with the team chat checklist. Record answers direct
 - [ ] Confirm roles and owners for every stage below (all)
 - [ ] Create shared repo and shared drive with this brief as the root document (Clinton)
 - [ ] Agree naming conventions, a single data dictionary file and a decisions log (all)
-- [ ] Fix the date and time of the group call and the context call (Joy)
+- [x] Fix a regular call slot: Monday and Friday at 8:30 PM (agreed 23 Nov)
+- [ ] Fix the date of the context call (Joy)
 - **Gate:** every stage has an owner and a deadline backwards from the submission date (date TBC)
 
 ### Stage 1: Deep desk research on KEPRO and the law
@@ -203,6 +226,8 @@ A longer question list lives with the team chat checklist. Record answers direct
 - [ ] Collect any public KEPRO reports, press and impact figures (Joy)
 - [ ] Draw our hypothesis diagram of the money flow from producer to recycler (Clinton)
 - [ ] Benchmark how other PROs report impact and verify claims (Victor)
+- [ ] Review TakaTrace together and list which of our ideas it already covers (all, 27 Nov call)
+- [ ] Compare the Utilization of Funds and Traceability briefs and confirm the scope split in 1.4 (Joy, all)
 - **Gate:** a one-page "how KEPRO works" the whole team agrees on
 
 ### Stage 2: Context call and data discovery
@@ -218,14 +243,14 @@ A longer question list lives with the team chat checklist. Record answers direct
 ### Stage 3: Problem framing and AI use cases
 - [ ] Select 3-4 use cases from section 7.1 (all)
 - [ ] Write KPI formulas: cost per verified tonne, verification confidence score, underperformance index (Joy, Victor)
-- [ ] Decide the anchor: duka node, aggregator, collector, or a combination, based on the call (all)
+- [ ] Decide the join: how payments map to TakaTrace-verified quantities (by payee, program and period) (all)
 - [ ] Decide how reuse is measured (cycles, packaging avoided) if it is in scope (Joy)
 - **Gate:** a signed-off problem statement and 3-4 AI questions
 
 ### Stage 4: Data requirements and schema
 - [ ] Turn section 7.3 into an entity-relationship diagram and field-level data dictionary (Clinton)
 - [ ] For each AI use case, list the fields needed and where each will come from (Victor, Caleb)
-- [ ] Design the evidence model: which proof types count and how they combine into a confidence score (Clinton, Victor)
+- [ ] Design the payment-to-evidence match model: how TakaTrace verification status and quantities combine into a score for each payment (Clinton, Victor)
 - [ ] Data protection review: minimize personal data, pseudonymize actors, avoid unnecessary precise location (Joy, Clinton)
 - [ ] Create the database schema in Supabase (Clinton)
 - **Gate:** schema v1 frozen
@@ -241,9 +266,9 @@ A longer question list lives with the team chat checklist. Record answers direct
 - [ ] Build the generator parameters from the Stage 5 sheet (Caleb)
 - [ ] Generate base entities: producers, programs, funds, actors across counties with realistic clustering (Caleb, Victor)
 - [ ] Generate activity: collection events, transfers, processing records, disbursements, with seasonality and realistic yield loss (Caleb)
-- [ ] Generate evidence records with realistic gaps (missing photos, late scans, no invoice) (Clinton)
-- [ ] Enforce mass balance: material in roughly equals material out, within a plausible loss (Caleb)
-- [ ] **Seed labeled anomalies:** inflated weights, duplicate claims, ghost actors, GPS or time mismatches, round-number payments, payments without evidence, colluding clusters (Victor)
+- [ ] Generate a stand-in for TakaTrace verified records (verified, pending, rejected) with realistic gaps, if real access is not available (Clinton)
+- [ ] Keep the synthetic data internally consistent: verified material in roughly equals material out, within a plausible loss (Caleb)
+- [ ] **Seed labeled anomalies:** payments with no verified activity, paid-per-tonne outliers, duplicate payments, payment before verification, round-number payments, claimed weight far above verified weight, colluding payee clusters (Victor)
 - [ ] Use a fixed random seed. Version every dataset and keep a changelog (Caleb)
 - [ ] Mark every synthetic file clearly as synthetic, in file names and in the proposal (all)
 - **Gate:** dataset v1 produced with ground-truth anomaly labels
@@ -267,20 +292,20 @@ A longer question list lives with the team chat checklist. Record answers direct
 
 ### Stage 9: Build the prototype
 - [ ] Dashboard for KEPRO: money in, money out, verified impact, flags (Clinton)
-- [ ] Verification flow demo: QR handover scan, two-party confirmation, GPS and timestamp, M-Pesa reference (Clinton)
+- [ ] Payment-to-verification view: for each payment, the matched TakaTrace-verified quantity, cost per verified tonne and flag reasons (Clinton)
 - [ ] Role views for funder, operator, regulator and collector (Clinton)
-- [ ] Low-bandwidth design: a simple capture path for basic phones (Clinton, Caleb)
-- [ ] Optional: duka node onboarding flow if the anchor holds (Clinton)
+- Parked (traceability, Brief 2): QR handover scans, two-party confirmation, GPS capture, low-bandwidth capture and duka onboarding
 - **Gate:** end-to-end demo works on the generated dataset
 
 ### Stage 10: Evaluate
 - [ ] Measure anomaly precision and recall against the seeded labels (Victor)
-- [ ] Walk through 3 scenarios end to end (honest claim, inflated claim, ghost collector) (all)
+- [ ] Walk through 3 scenarios end to end (honest payment, payment with no verified activity, duplicate payment) (all)
 - [ ] Record failure cases and limitations honestly (Victor, Joy)
 - [ ] Draft the roadmap from synthetic data to a real pilot (Joy)
 - **Gate:** evaluation results written up
 
 ### Stage 11: Proposal and pitch
+- [ ] Get the proposal format, scoring criteria and deadline from Discord before drafting (Joy)
 - [ ] Narrative: problem, who it serves, solution, why now (Joy, Clinton)
 - [ ] Business and impact case grounded in sourced numbers only (Joy)
 - [ ] Demo script and slides (Clinton)
@@ -302,7 +327,8 @@ A longer question list lives with the team chat checklist. Record answers direct
 - **Do not overclaim.** Every number in the proposal needs a source or an "assumption" tag.
 - **Protect people.** Pseudonymize collectors, keep only the location precision we need, and follow the Data Protection Act.
 - **Identity is not impact.** Verifying who acted is not the same as verifying what happened. Combine several independent pieces of evidence.
-- **Do not lock into dukas too early.** Treat the duka anchor as a hypothesis until the context call answers whether dukas are in KEPRO's network.
+- **Stay on the money layer.** Do not rebuild TakaTrace. The duka anchor is parked as traceability work and is revisited only if the team also pursues Brief 2.
+- **Check every feature against TakaTrace.** Before pitching an idea, confirm TakaTrace does not already do it.
 - **Keep reuse measurable.** Reuse produces no recycled tonne, so it needs its own metric.
 
 ---
