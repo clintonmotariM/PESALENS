@@ -19,7 +19,7 @@
 
 ## 1. Our team and our role
 
-### 1.1 Who we are (as stated in the team chat)
+### 1.1 Who we are
 
 | Member | Background | Proposed contribution (to be confirmed) |
 |---|---|---|
